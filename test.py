@@ -10,8 +10,9 @@ def more(text):
             if reply == 'n':
                 break
 
-url = 'http://python.org/'  # προσδιορισμός του url
+url =input("Give me the url you want:\n")# προσδιορισμός του url
 
 with requests.get(url) as response:  # το αντικείμενο response
-    html = response.text
-    more(html)
+    html = response.headers
+    print(html['Server'])
+    print(html'cookies.get_dict()')
